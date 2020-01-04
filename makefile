@@ -32,7 +32,7 @@ merchant.o: items.o inventory.o event.o
 
 inventory.o: character.o items.o $(POTIONS.O) $(WEAPONS.O)\
 		lamp.o herb.o feather.o
-	$(CXX) $(CXXFLAGS) iventory.h
+	$(CXX) $(CXXFLAGS) inventory.h
 
 chest.o: event.o weapons_upgrade.o armor_upgrade.o\
 		lamp.o herb.o ability_scroll.o
@@ -40,7 +40,6 @@ chest.o: event.o weapons_upgrade.o armor_upgrade.o\
 
 ability_scroll.o: items.o
 	$(CXX) $(CXXFLAGS) ability_scroll.h
-
 
 lamp.o: items.o
 	$(CXX) $(CXXFLAGS) lamp.h
@@ -110,11 +109,9 @@ golem.o: monster.o
 
 skeleton_soldier.o: monster.o
 	$(CXX) $(CXXFLAGS) skeleton_soldier.h
+	
 items.o: character.o
 	$(CXX) $(CXXFLAGS) items.h
-
-
-
 
 adventurer.o: character.o
 	$(CXX) $(CXXFLAGS) adventurer.h
